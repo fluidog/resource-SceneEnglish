@@ -41,6 +41,7 @@ function refreshStyle() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // addBaseUrlToSrc(baseUrl);
     refreshStyle();
     document.querySelectorAll('.header').forEach(el => {
         el.addEventListener('click', function(event) {
@@ -71,9 +72,30 @@ function hide(element) {
     refreshStyle()
 }
 
+baseUrl = 'https://jsd.onmicrosoft.cn/gh/fluidog/resource-SceneEnglish/html/';
+
 function changeBaseUrl(newBaseUrl) {
     let base = document.createElement('base');
     base.href = newBaseUrl;
     document.head.appendChild(base);
 }
-changeBaseUrl('https://jsd.onmicrosoft.cn/gh/fluidog/resource-SceneEnglish/html/');
+changeBaseUrl(baseUrl);
+
+function addBaseUrlToSrc(baseUrl) {
+    // 选择所有带有 src 属性的元素
+    const elements = document.querySelectorAll('[src]');
+
+    elements.forEach(element => {
+        console.log("hello", element.classList);
+        let src = element.getAttribute('src');
+
+        // 检查 src 是否已经是绝对 URL
+        if (!src.startsWith('http://') && !src.startsWith('https://') && !src.startsWith('//')) {
+            // 移除开头的斜杠（如果有）
+            src = src.replace(/^\//, '');
+
+            // 组合基础 URL 和 src
+            element.setAttribute('src', baseUrl + src);
+        }
+    });
+}
