@@ -25,7 +25,6 @@
             font-size: 2em;
         }
         #result {
-            margin-top: 20px;
             width: 100%;
             height: 120em; /* 调整高度以适应你的需求 */
             border: none;
@@ -63,7 +62,7 @@
             resultFrame.onload = function() {
                 loadingDiv.style.display = 'none';
                 resultFrame.style.display = 'block';
-                this.style.height = this.contentWindow.document.body.scrollHeight + '1px';
+                this.style.height = (this.contentWindow.document.body.scrollHeight + 40) + 'px';
             }
         }
     </script>
