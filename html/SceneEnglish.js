@@ -70,3 +70,10 @@ function hide(element) {
     });
     refreshStyle()
 }
+
+function changeBaseUrl(newBaseUrl) {
+    let base = document.createElement('base');
+    base.href = newBaseUrl;
+    document.head.appendChild(base);
+}
+changeBaseUrl('https://cdn.jsdelivr.net/gh/fluidog/resource-SceneEnglish/html/');
