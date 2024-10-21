@@ -92,6 +92,8 @@ li {
 /* Responsive image sizing */
 img {
     max-width: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 根据实际需求调整比例 */
 }
 
 /* Hide images after the second one by default */

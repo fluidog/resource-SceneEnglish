@@ -76,4 +76,4 @@ function changeBaseUrl(newBaseUrl) {
     base.href = newBaseUrl;
     document.head.appendChild(base);
 }
-changeBaseUrl('https://cdn.jsdelivr.net/gh/fluidog/resource-SceneEnglish/html/');
+changeBaseUrl('https://jsd.onmicrosoft.cn/gh/fluidog/resource-SceneEnglish/html/');
