@@ -4,9 +4,9 @@ let default_style = {
     /* 核心含义 */
     "coreMeaning": 1,
     /* 词根词缀 */
-    "rootAffix": 1,
+    "rootAffix": 0,
     /* 派生含义 */
-    "derivedMeaning": 1,
+    "derivedMeaning": 0,
 }
 
 function saveVariable(name, value) {
@@ -79,11 +79,11 @@ function changeBaseUrl(newBaseUrl) {
     base.href = newBaseUrl;
     document.head.appendChild(base);
 }
-changeBaseUrl(baseUrl);
+// changeBaseUrl(baseUrl);
 
 function addBaseUrlToSrc(baseUrl) {
     // 选择所有带有 src 属性的元素
-    const elements = document.querySelectorAll('[src]');
+    const elements = document.querySelectorAll('.picture[src]');
 
     elements.forEach(element => {
         console.log("hello", element.classList);

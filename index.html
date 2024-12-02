@@ -57,8 +57,7 @@
         function loadWordDefinition(word) {
             loadingDiv.style.display = 'block';
             resultFrame.style.display = 'none';
-            resultFrame.src = `https://luckie.top/html/${word}.html`;
-            // resultFrame.src = `words/${word}.html`;
+            resultFrame.src = `html/${word}.html`;
             resultFrame.onload = function() {
                 loadingDiv.style.display = 'none';
                 resultFrame.style.display = 'block';
